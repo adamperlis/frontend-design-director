@@ -1,5 +1,23 @@
 [
   {
+    "id": "reference-structures",
+    "purpose": "Three distinct reference-led section geometries: compact product stage, broad workflow chapter, and operation grid",
+    "archetypes": ["saas-ai", "developer-platform"],
+    "technologies": ["html", "css", "javascript"],
+    "files": ["structures/index.html", "structures/structures.css", "structures/structures.js", "structures/manifest.json", "../references/structural-library.md"],
+    "useWhen": "Reference-led work needs concrete UI hierarchy and section structure rather than another cosmetic variation of the prior page.",
+    "avoidWhen": "An established product system dictates the layout. These are original reconstructions, not Ditto-generated code; check the manifest."
+  },
+  {
+    "id": "trace-agent-replay",
+    "purpose": "Follow an agent failure from execution span to retrieved source, then compare a controlled replay",
+    "archetypes": ["saas-ai", "developer-platform"],
+    "technologies": ["html", "css", "typescript"],
+    "files": ["trace/index.html", "trace/style.css", "trace/main.ts", "trace/DIRECTION.md"],
+    "useWhen": "The product makes a technical failure inspectable through causal evidence.",
+    "avoidWhen": "The premise does not involve debugging or lineage; do not reuse the instrument styling automatically."
+  },
+  {
     "id": "cadence-shared-launch",
     "purpose": "Four purpose-built SaaS UI slots: date-change simulation, linked source/task, handoff, and explicit release approval",
     "archetypes": ["saas-ai"],

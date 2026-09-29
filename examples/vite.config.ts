@@ -16,6 +16,10 @@ export default defineConfig({
           resolve(import.meta.dirname, "vanilla/script.js"),
           resolve(import.meta.dirname, "dist/vanilla/script.js"),
         );
+        await mkdir(resolve(import.meta.dirname, "dist/structures"), { recursive: true });
+        for (const file of ["structures.css", "structures.js", "manifest.json"]) {
+          await copyFile(resolve(import.meta.dirname, "structures", file), resolve(import.meta.dirname, "dist/structures", file));
+        }
       },
     },
   ],
@@ -30,6 +34,8 @@ export default defineConfig({
         research: resolve(import.meta.dirname, "research/index.html"),
         cinematic: resolve(import.meta.dirname, "cinematic/index.html"),
         saas: resolve(import.meta.dirname, "saas/index.html"),
+        trace: resolve(import.meta.dirname, "trace/index.html"),
+        structures: resolve(import.meta.dirname, "structures/index.html"),
         lumaDirected: resolve(import.meta.dirname, "luma-directed/index.html"),
       },
     },
