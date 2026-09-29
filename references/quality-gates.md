@@ -18,6 +18,8 @@ A static browser capture does not prove animation, responsive behavior, or an in
 ## Reject and revise when
 
 - A product's promise is represented only by unrelated shapes, a fake metric, or a decorative dashboard.
+- Repeated dashboard crops add no new evidence, or a mixed grid has no content-based hierarchy.
+- A fade masks the decisive detail, or clipping hides a focusable control. Keep art crops separate from uncropped working interfaces.
 - Every archetype has the same hierarchy, proof format, and interaction with a different color.
 - A heading changes but the dominant layout remains a familiar unexamined template.
 - A sample action does nothing, points to a dead endpoint, or pretends to submit real data.
@@ -47,6 +49,7 @@ Claims such as “better than the default skill” require a matched evaluation.
 - Are type, spacing, color, radius, border, and media rules consistent?
 - Is there one dominant visual idea rather than several unrelated effects?
 - Are product screenshots or photographs art-directed and legible?
+- Does each UI scene substantiate its adjacent claim, with a clear focal detail and intentional crop? Are fictional illustrations distinguished from real captures?
 - Are repeated cards genuinely the right structure?
 
 ## Interaction
@@ -54,12 +57,14 @@ Claims such as “better than the default skill” require a matched evaluation.
 - Are states complete: hover, focus, active, loading, success, error, disabled, empty?
 - Does motion have a named purpose and reduced-motion fallback?
 - Are controls reachable and understandable by keyboard and touch?
+- Does an interaction update related scenes consistently, including invalidating stale decisions when their inputs change?
 
 ## Responsive
 
 - Does mobile preserve priority while changing composition?
 - Do nav, tables, code, diagrams, media, and sticky elements work at narrow widths?
 - Are tap targets, line lengths, and spacing comfortable?
+- Does mobile preserve the intended art direction through a new crop or grouping, rather than merely expanding or shrinking every desktop panel?
 
 ## Accessibility and performance
 

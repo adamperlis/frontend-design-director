@@ -1,5 +1,15 @@
 [
   {
+    "id": "cadence-shared-launch",
+    "purpose": "Four purpose-built SaaS UI slots: date-change simulation, linked source/task, handoff, and explicit release approval",
+    "archetypes": ["saas-ai"],
+    "technologies": ["html", "css", "typescript", "svg"],
+    "files": ["saas/index.html", "saas/style.css", "saas/main.ts", "saas/DIRECTION.md", "saas/REVIEW.md"],
+    "useWhen": "The value is cross-team coordination and a concrete input/action/result can prove it.",
+    "avoidWhen": "The product needs a different proof object; do not reuse the launch metaphor or lilac palette by default.",
+    "preview": "previews/saas-desktop.jpg"
+  },
+  {
     "id": "vanilla-product-landing",
     "purpose": "Editorial evidence workspace with dissent and a reversible decision",
     "archetypes": [

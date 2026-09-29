@@ -45,6 +45,47 @@ Best for products like Cursor.
 - When a hero is interactive, seed it with an example that teaches the product and offers an obvious next action.
 - Cinematic media can create desire, but the next section must resolve into concrete workflow proof.
 
+## Compose UI as product imagery
+
+Learning from the September 2026 Cadence critiques: complete, readable panels alone did not reproduce the references' compositional quality. Plan the image slot and section layout together. These are options, not a mandatory grid or section count.
+
+| Treatment | Choose it when | Preserve |
+|---|---|---|
+| Actual product UI or a faithful crop | Credibility depends on the real workflow | Decisive state, realistic content, recognizable controls |
+| Simplified UI fragment | One capability gets lost in application chrome | Input, relationship, result; omit irrelevant navigation |
+| Cropped UI composition | The product should feel larger than the frame | A sharp focal detail and enough context to interpret it |
+| Interactive demonstration | Visitors benefit from testing a consequence | Working controls, consistent shared state, reset and failure boundaries |
+
+Do not label original fictional UI as a real product capture. Illustrative fragments need meaningful content but not fake working buttons. Keep operational controls in a separate uncropped demo if art direction requires masking the illustration.
+
+### Layout patterns to adapt
+
+- **Dominant scene plus supporting cells:** give the core capability more area than secondary evidence. Unequal widths and spans should express priority, not random bento decoration.
+- **Text outside the crop:** align the claim with its relevant UI detail. Keep the copy and action outside the clipping/masking layer.
+- **Full-width scene → denser grid → quiet explanation:** vary scale and density across chapters rather than repeating alternating text/image rows indefinitely.
+- **Interface beyond the frame:** use overflow clipping and a targeted edge fade to imply continuation. Keep the focal task sharp; never fade important numbers, statuses, controls, or the only explanation.
+- **Mobile-specific framing:** select a new focal crop and offset, reduce peripheral chrome, and retain intentional grouping where it remains legible. Do not automatically expand every fragment into a complete tall card or shrink a desktop screenshot to fit.
+
+Reference reasoning: the measured Linear study supports persistent work objects and broad product chapters; Cursor supports quieter text around a substantial product stage; ElevenLabs supports one selector shell with changing representative content; Firecrawl supports an executable operation near the claim. The specific mixed grid, masks, and offsets in Cadence are original adaptations responding to user feedback—not measured reproductions of all those sites. Consult the research ledger before claiming further source coverage.
+
+### Borrowable implementation
+
+Inspect [Cadence HTML](../examples/saas/index.html), [CSS](../examples/saas/style.css), and [state logic](../examples/saas/main.ts). Search for `hero-product-crop`, `feature-cell`, `mini-crop`, and `demo-disclosure`. Its linked source/task slot, date proposal, explicit approval, and reset are useful ingredients. Do not inherit its colors, launch premise, exact grid, or number of scenes by default.
+
+```css
+/* Illustration only: keep meaningful controls outside this masked layer. */
+.product-crop { position: relative; overflow: hidden; }
+.product-crop__art {
+  width: 36rem;
+  mask-image: linear-gradient(#000 75%, transparent);
+}
+@media (max-width: 40rem) {
+  .product-crop__art { width: 26rem; margin-left: -2rem; }
+}
+```
+
+Specify the scene's claim, focal detail, desktop crop, mobile crop, and behavior before implementation. A fade is not a substitute for a well-chosen crop. In interactive scenes, one change must update all related visible states; altered evidence may invalidate an earlier approval.
+
 ## Example transformations
 
 - Generic: “AI that transforms your workflow” above a glowing orb.
@@ -52,4 +93,3 @@ Best for products like Cursor.
 
 - Generic: six cards for six features.
 - Directed: one customer task shown end-to-end, followed by three compact capability annotations.
-

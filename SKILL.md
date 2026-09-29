@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.2.0
+  version: 0.3.0
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -30,6 +30,7 @@ When uncertain, read [routing.md](references/routing.md). For inner pages, read 
 2. Choose a small set of relevant references from [reference-library.md](references/reference-library.md). Read the matching measured examples in [visual-studies.md](references/studies/visual-studies.md). Check their evidence level: an extracted heading list cannot substantiate a visual or interaction claim. References can support architecture, expression, or a particular behavior; there is no required number.
 3. Establish the page’s job, conversion, proof burden, and one dominant visual idea before choosing components.
 4. Draft the section sequence in plain language. Every section must advance understanding, proof, differentiation, or action; remove sections that only restate the hero.
+   For product-led pages, identify the claim each UI scene proves, then choose actual UI, a focused crop, simplified UI, or an interactive demonstration. Borrow section-level layout patterns as well as surface styling: relative cell sizes, text-to-art alignment, crop boundaries, and changes in density. Record which inspected reference supports the choice. Read the UI-scene guidance in [saas-ai.md](references/saas-ai.md); one dashboard should not carry every claim.
 5. Sketch two plausible compositions before committing to a showcase design. Choose the one that best explains this product. Record actual type sizes and line lengths, grid proportions, image crops, section transitions, and mobile ordering. Use [composition-recipes.md](references/composition-recipes.md) for concrete, optional examples. A token list alone is insufficient art direction.
 6. Build the semantic skeleton and responsive hierarchy first. Add expressive media and motion only after the page reads correctly without them.
 7. Verify with [quality-gates.md](references/quality-gates.md). Save rendered desktop and mobile evidence and exercise the focal interaction. Record failures and revise before calling a page reviewed. If animation materially shapes the experience, also read [motion.md](references/motion.md).
@@ -62,6 +63,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 - Match density to risk. Developer pages may be information-dense; luxury products need space; regulated products need calm clarity; experimental sites need a stable navigational spine.
 - Use accent color as syntax: action, state, category, or narrative emphasis. Do not sprinkle it randomly.
 - Make typography carry hierarchy. Use no more type styles than the content model needs, and keep line lengths intentional.
+  For Adam's projects, the current preference is a maximum of two loaded font families unless he explicitly overrides it. This is a project preference, not a universal design law.
 - Let the interface explain itself. Product visuals need legible states, realistic data, and a clear focal task—not decorative dashboard confetti.
 - Mobile is a recomposition. Preserve the concept while changing crop, order, density, and interaction; do not merely stack desktop columns.
 - Respect `prefers-reduced-motion`; never gate meaning behind hover, scroll choreography, or a canvas effect.

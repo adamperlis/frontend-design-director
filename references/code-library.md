@@ -23,6 +23,14 @@ Open `examples/index.html` for the gallery. Four distinct studies work without a
 
 Each study has its own hierarchy, proof format, and visual system. See [composition-recipes.md](composition-recipes.md) for why those choices fit the example. Replace all sample content and assumptions before real use. These are fictional demonstrations, not working businesses.
 
+## Product-led SaaS and cinematic studies
+
+- `examples/saas/`: Cadence, rebuilt under Frontend Design Director with exactly two loaded font families. Four purpose-built UI slots: working schedule/change preview, source-to-task fragments, an inspectable handoff canvas, and a release gate. Borrow the proposed/applied state separation, invalidation of earlier reviews, keyboard tabs, pricing calculation, and scroll-drawn SVG route. On mobile the schedule becomes dated cards. Run through Vite; read its `DIRECTION.md` and `REVIEW.md` before adapting it. No backend or real integrations.
+- `examples/luma-directed/`: an object-first physical-product study with a persistent Three.js instrument and material selection. This is a different proof strategy from Cadence, not a required visual treatment for SaaS.
+- `examples/cinematic/`: the earlier cinematic proposal, retained for comparison rather than presented as the current direction.
+
+The [navigation follow-up](studies/navigation-followup-studies.md) explains which reference structures informed Cadence and which observations remain partial.
+
 ## Integration lab
 
 From `examples/`, run `bun install --frozen-lockfile`, then `bun run dev` and open `/lab.html`. `bun run build` typechecks the recipes and builds all pages. The lab mounts two independent tab sets, ProductStory in a form, a reveal, a magnetic link, the WebGL field, and a GSAP scroll sequence. See [verification.md](verification.md) for actual tested states rather than assuming all recipes are fully verified.

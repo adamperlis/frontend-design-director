@@ -4,7 +4,9 @@ A routing-first design-and-build skill for Claude Code and Codex. It classifies 
 
 The reference corpus covers ElevenLabs, Linear, Stripe, Perplexity, Supabase, Cloudflare, Firecrawl, Cursor, Retool, Ramp, Mercury, Prism Science, The Content Architecture, Blink, and Edoardo Lunardi’s Prism case study. Research is **in progress**: the [coverage ledger](references/studies/coverage.md) distinguishes discovery, content extraction, browser capture, and analyst review. Perplexity and Ramp could not be visually studied in the current environment. Do not interpret a fetched page as a completed design study.
 
-Version 0.2.0 adds four distinct standalone studies, a runnable React/motion/WebGL lab, measured visual observations, and evidence-based review criteria. The six archetype blueprints are planning tools, not six finished designs. All examples are optional ingredients.
+The library includes four standalone studies, cinematic LUMA experiments, a product-led Cadence SaaS example, a runnable React/motion/WebGL lab, and evidence-based review criteria. The six archetype blueprints are planning tools, not six finished designs. All examples are optional ingredients. Cadence follows the current maximum of two loaded font families; older studies are retained as historical examples.
+
+The September 29 navigation follow-up tracks 550 discovered destinations. All previously unreviewed opening captures were inspected, and 156 further destinations were attempted. Read the [follow-up synthesis](references/studies/navigation-followup-studies.md) and [coverage ledger](references/studies/coverage.md): sampled captures are not comprehensive motion, mobile, or every-section verification. Pear is included through source analysis and limited live observation.
 
 ## Install for Claude Code
 
@@ -38,24 +40,26 @@ Open [the gallery](examples/index.html) locally, or inspect the studies and capt
 
 | Study | Product idea | Borrowable behavior |
 |---|---|---|
+| [Cadence](examples/saas/index.html) · [preview](examples/previews/saas-desktop.jpg) | Product-led SaaS | Date-change simulation, source/task UI slots, inspectable handoffs, explicit release gate, pricing calculator |
+| [LUMA directed](examples/luma-directed/index.html) · [preview](examples/previews/luma-directed-desktop.jpg) | Physical product / cinematic | Persistent 3D instrument, material selection, chapter continuity |
 | [Northstar](examples/vanilla/index.html) · [preview](examples/previews/vanilla-desktop.png) | Product judgment | Evidence, dissent, and a reversible decision |
 | [Lilt](examples/commerce/index.html) · [preview](examples/previews/commerce-desktop.png) | Physical object | Original SVG product, finishes, sample bag, specifications |
 | [Relay](examples/developer/index.html) · [preview](examples/previews/developer-desktop.png) | Developer infrastructure | Request, response, retry, and rejection fixtures |
 | [Fieldwork](examples/research/index.html) · [preview](examples/previews/research-desktop.png) | Research/editorial | Manipulable signal, uncertainty, methods, editorial index |
 
-The four studies require no build and can open as HTML files. To run the integration lab:
+Northstar, Lilt, Relay, and Fieldwork can open as HTML files. Cadence, LUMA, and the integration lab require the local server:
 
 ```sh
 cd examples
 bun install --frozen-lockfile
 bun run dev
-# open /lab.html
+# open /saas/index.html, /luma-directed/index.html, or /lab.html
 bun run build
 ```
 
 Reproducible browser checks are included in `examples/tests/verify.mjs`. See the [verification report](references/verification.md) for setup, tested states, and limitations.
 
-The production build includes all four studies and the lab. Browse [pattern-index.json](examples/pattern-index.json) and [composition recipes](references/composition-recipes.md) for adaptation notes. Fonts are bundled for offline use, with licenses in `examples/assets/`.
+The production build includes the studies, Cadence, LUMA, and the lab. Browse [pattern-index.json](examples/pattern-index.json) and [composition recipes](references/composition-recipes.md) for adaptation notes. Fonts are bundled for offline use with included licenses. Cadence's separate [review record](examples/saas/REVIEW.md) identifies its tested states and remaining limitations.
 
 ## Quality and limits
 
