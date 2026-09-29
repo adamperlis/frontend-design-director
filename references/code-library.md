@@ -14,6 +14,8 @@ Do not add a dependency solely because an example uses it. Translate the underly
 
 ## Runnable studies
 
+The build-served `examples/reference-ui/` contains four independent, source-attributed SaaS composition studies selected with `?study=cursor`, `linear`, `firecrawl`, or `elevenlabs`. Read [the evidence record](studies/direct-ui-reconstruction.md) before borrowing. Public code is original; inspected vendor HTML/CSS and screenshots are research evidence, not redistributed assets. These studies supplement—not replace—the older HTML examples below.
+
 Open `examples/index.html` for the gallery. Four distinct studies work without a build:
 
 - `vanilla/`: Northstar, an evidence workspace with linked notes, dissent, explanations, and a reversible sample commitment. Without JavaScript, all evidence stays visible and anchors work normally.

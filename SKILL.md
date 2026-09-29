@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.3.0
+  version: 0.3.1
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -44,6 +44,8 @@ For product demos, specify an input, a user action, and a visible consequence. I
 For reference research, preserve the navigation URL including anchors, discovery source, retrieval status, visual-review status, viewport, and interaction notes. A queued clone job, fetched sitemap, or captured screenshot awaiting review is not a completed study. Use the [coverage ledger](references/studies/coverage.md); leave blocked items visible.
 
 ## Borrowable implementation examples
+
+For reference-led SaaS work, read [direct UI reconstructions](references/studies/direct-ui-reconstruction.md) and inspect the matching `examples/reference-ui/` study before choosing a layout. These separate Cursor, Linear, Firecrawl, and ElevenLabs compositions preserve evidence density, crop boundaries, and distinct demonstration formats; they are optional original reimplementations, not vendor source or a universal template. Compare geometry and interaction states, not just palette. Do not describe a retrieved stylesheet or queued clone as a verified reconstruction.
 
 When the task includes implementation, read [code-library.md](references/code-library.md), then inspect only the relevant files under `examples/`. The library includes a runnable vanilla HTML/CSS/JavaScript page, reusable React and Tailwind patterns, Framer Motion and GSAP interactions, WebGL/React Three Fiber shaders, and code-shaped page starters for all six archetypes.
 

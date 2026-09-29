@@ -20,6 +20,9 @@ export default defineConfig({
         for (const file of ["structures.css", "structures.js", "manifest.json"]) {
           await copyFile(resolve(import.meta.dirname, "structures", file), resolve(import.meta.dirname, "dist/structures", file));
         }
+        await mkdir(resolve(import.meta.dirname, "dist/reference-ui"), { recursive: true });
+        await copyFile(resolve(import.meta.dirname, "reference-ui/README.md"), resolve(import.meta.dirname, "dist/reference-ui/README.md"));
+        await copyFile(resolve(import.meta.dirname, "reference-ui/REVIEW.md"), resolve(import.meta.dirname, "dist/reference-ui/REVIEW.md"));
       },
     },
   ],
@@ -36,6 +39,7 @@ export default defineConfig({
         saas: resolve(import.meta.dirname, "saas/index.html"),
         trace: resolve(import.meta.dirname, "trace/index.html"),
         structures: resolve(import.meta.dirname, "structures/index.html"),
+        referenceUi: resolve(import.meta.dirname, "reference-ui/index.html"),
         lumaDirected: resolve(import.meta.dirname, "luma-directed/index.html"),
       },
     },

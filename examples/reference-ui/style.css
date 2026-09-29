@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@source "./main.tsx";
+@layer base {
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+  button:not(:disabled),
+  a {
+    cursor: pointer;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #ff6b15;
+    outline-offset: 4px;
+  }
+  button:disabled {
+    cursor: default;
+  }
+  code,
+  pre {
+    font-family: monospace;
+  }
+  ::selection {
+    background: #ecbd72;
+    color: #171711;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
