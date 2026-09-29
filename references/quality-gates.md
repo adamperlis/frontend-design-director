@@ -1,5 +1,35 @@
 # Quality gates
 
+Use these to decide whether the work is ready, not to certify it by assertion. Visual recipes remain optional. Correctness, honest evidence, and the user's constraints are required.
+
+## Evidence needed for a reviewed implementation
+
+Save a short review record beside the project, with links to:
+
+- the chosen concept and rejected alternative, with a reason grounded in the product;
+- desktop and narrow-mobile rendered screenshots (record actual viewport sizes);
+- the first viewport, a middle transition, and the focal interaction's changed state;
+- keyboard, reduced-motion, and JavaScript-disabled results where applicable;
+- build/typecheck output for the code that is actually shipped;
+- known gaps, unverified claims, and the revision made after reviewing the render.
+
+A static browser capture does not prove animation, responsive behavior, or an interactive state. A compile check does not prove visual quality. Report these independently. If the browser is unavailable, mark visual review pending and do not call the output visually verified.
+
+## Reject and revise when
+
+- A product's promise is represented only by unrelated shapes, a fake metric, or a decorative dashboard.
+- Every archetype has the same hierarchy, proof format, and interaction with a different color.
+- A heading changes but the dominant layout remains a familiar unexamined template.
+- A sample action does nothing, points to a dead endpoint, or pretends to submit real data.
+- A claimed reference study has no destination URL and evidence of inspection.
+- JavaScript failure hides important content, focus disappears, labels collide, or mobile overflows.
+
+Choose the highest-impact failure, revise its structure or behavior, and recapture the affected states. Do not add an effect to compensate for a weak product explanation. Stop iterating once the brief and checks are satisfied; taste disagreements belong in the review record.
+
+## Comparative evaluation
+
+Claims such as “better than the default skill” require a matched evaluation. See [audit-and-evaluation.md](audit-and-evaluation.md). Until then, describe capabilities and observed improvements, not an unmeasured ranking.
+
 ## Concept
 
 - Can the visual and verbal concept be stated in one sentence?
@@ -43,4 +73,3 @@
 - Is all copy original?
 - Are borrowed ideas abstracted rather than copied?
 - Would removing brand colors still leave an original composition?
-

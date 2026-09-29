@@ -1,65 +1,218 @@
 [
   {
     "id": "vanilla-product-landing",
-    "purpose": "Complete semantic marketing-page foundation",
-    "archetypes": ["saas-ai", "developer-platform", "fintech-enterprise"],
-    "technologies": ["html", "css", "javascript"],
-    "files": ["vanilla/index.html", "vanilla/styles.css", "vanilla/script.js"],
-    "useWhen": "A dependency-free reference or a fast structural prototype is useful.",
-    "avoidWhen": "The target repository already has equivalent primitives that should be preserved."
+    "purpose": "Editorial evidence workspace with dissent and a reversible decision",
+    "archetypes": [
+      "saas-ai"
+    ],
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "files": [
+      "vanilla/index.html",
+      "vanilla/styles.css",
+      "vanilla/script.js"
+    ],
+    "useWhen": "The product turns source evidence into an inspectable decision.",
+    "avoidWhen": "The target repository already has equivalent primitives that should be preserved.",
+    "preview": "previews/vanilla-desktop.png"
   },
   {
     "id": "react-marketing-primitives",
     "purpose": "Composable hero, product window, chapter, metrics, pricing, and CTA",
-    "archetypes": ["saas-ai", "developer-platform", "fintech-enterprise", "commerce-physical"],
-    "technologies": ["react", "typescript", "tailwind"],
-    "files": ["react/MarketingPatterns.tsx"],
+    "archetypes": [
+      "saas-ai",
+      "developer-platform",
+      "fintech-enterprise",
+      "commerce-physical"
+    ],
+    "technologies": [
+      "react",
+      "typescript",
+      "tailwind"
+    ],
+    "files": [
+      "react/MarketingPatterns.tsx"
+    ],
     "useWhen": "Building in an existing React and Tailwind marketing site.",
     "avoidWhen": "The project uses another framework or a mature component system."
   },
   {
     "id": "framer-motion-interactions",
     "purpose": "Spring reveals, magnetic action, shared-layout tabs, and product sequencing",
-    "archetypes": ["saas-ai", "portfolio-experimental"],
-    "technologies": ["react", "typescript", "framer-motion"],
-    "files": ["react/MotionPatterns.tsx"],
+    "archetypes": [
+      "saas-ai",
+      "portfolio-experimental"
+    ],
+    "technologies": [
+      "react",
+      "typescript",
+      "framer-motion"
+    ],
+    "files": [
+      "react/MotionPatterns.tsx"
+    ],
     "useWhen": "State or spatial continuity benefits from physics-based motion.",
     "avoidWhen": "CSS transitions already communicate the state or motion would compete with reading."
   },
   {
     "id": "gsap-scroll-story",
     "purpose": "Pinned desktop product narrative with safe responsive fallback",
-    "archetypes": ["saas-ai", "developer-platform", "research-editorial"],
-    "technologies": ["typescript", "gsap", "scrolltrigger"],
-    "files": ["motion/scroll-story.ts"],
+    "archetypes": [
+      "saas-ai",
+      "developer-platform",
+      "research-editorial"
+    ],
+    "technologies": [
+      "typescript",
+      "gsap",
+      "scrolltrigger"
+    ],
+    "files": [
+      "motion/scroll-story.ts"
+    ],
     "useWhen": "A real sequence benefits from scroll-linked comparison or progression.",
     "avoidWhen": "Sections are independent, mobile is primary, or scroll should remain unmodified."
   },
   {
     "id": "r3f-atmosphere",
-    "purpose": "Subject-derived atmospheric hero with graceful fallback",
-    "archetypes": ["research-editorial", "portfolio-experimental", "commerce-physical"],
-    "technologies": ["react", "typescript", "three", "react-three-fiber", "glsl"],
-    "files": ["webgl/AtmosphereCanvas.tsx", "webgl/atmosphere.vert", "webgl/atmosphere.frag"],
+    "purpose": "Optional material-field technique with failure and motion fallbacks",
+    "archetypes": [
+      "research-editorial",
+      "portfolio-experimental",
+      "commerce-physical"
+    ],
+    "technologies": [
+      "react",
+      "typescript",
+      "three",
+      "react-three-fiber",
+      "glsl"
+    ],
+    "files": [
+      "webgl/AtmosphereCanvas.tsx",
+      "webgl/atmosphere.vert",
+      "webgl/atmosphere.frag",
+      "webgl/README.md"
+    ],
     "useWhen": "Material, field, motion, or space is central to the story.",
     "avoidWhen": "The effect is generic decoration, obscures content, or cannot justify its performance cost."
   },
   {
     "id": "halftone-shader",
     "purpose": "Print or data-derived image treatment",
-    "archetypes": ["research-editorial", "portfolio-experimental"],
-    "technologies": ["glsl", "webgl"],
-    "files": ["webgl/halftone.frag"],
+    "archetypes": [
+      "research-editorial",
+      "portfolio-experimental"
+    ],
+    "technologies": [
+      "glsl",
+      "webgl"
+    ],
+    "files": [
+      "webgl/halftone.frag"
+    ],
     "useWhen": "The brand language genuinely relates to print, sampling, measurement, or pixels.",
     "avoidWhen": "A normal optimized image communicates more clearly."
   },
   {
     "id": "archetype-page-starters",
     "purpose": "Code-shaped section plans for six website families",
-    "archetypes": ["saas-ai", "developer-platform", "fintech-enterprise", "commerce-physical", "research-editorial", "portfolio-experimental"],
-    "technologies": ["react", "typescript"],
-    "files": ["starters/archetypes.ts", "starters/ArchetypePage.tsx"],
+    "archetypes": [
+      "saas-ai",
+      "developer-platform",
+      "fintech-enterprise",
+      "commerce-physical",
+      "research-editorial",
+      "portfolio-experimental"
+    ],
+    "technologies": [
+      "react",
+      "typescript"
+    ],
+    "files": [
+      "starters/archetypes.ts",
+      "starters/ArchetypePage.tsx"
+    ],
     "useWhen": "A project needs a strong initial information architecture.",
     "avoidWhen": "Research or an existing content model points to a different journey."
+  },
+  {
+    "id": "commerce-object-study",
+    "purpose": "An object, material detail, finish selection, and purchase confidence",
+    "archetypes": [
+      "commerce-physical"
+    ],
+    "technologies": [
+      "html",
+      "css",
+      "svg",
+      "javascript"
+    ],
+    "files": [
+      "commerce/index.html"
+    ],
+    "preview": "previews/commerce-desktop.png",
+    "useWhen": "An individual object should lead the page.",
+    "avoidWhen": "The task is a collection-heavy retail catalog."
+  },
+  {
+    "id": "developer-request-study",
+    "purpose": "Inspectable request, response, retry, and rejection",
+    "archetypes": [
+      "developer-platform"
+    ],
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "files": [
+      "developer/index.html"
+    ],
+    "preview": "previews/developer-desktop.png",
+    "useWhen": "A developer should understand input, output, and failure recovery.",
+    "avoidWhen": "The product's benefit cannot be expressed as a request workflow."
+  },
+  {
+    "id": "research-signal-study",
+    "purpose": "A research question, interactive explanation, editorial index, and method",
+    "archetypes": [
+      "research-editorial"
+    ],
+    "technologies": [
+      "html",
+      "css",
+      "svg",
+      "javascript"
+    ],
+    "files": [
+      "research/index.html"
+    ],
+    "preview": "previews/research-desktop.png",
+    "useWhen": "A concept benefits from a manipulable diagram and clear limitations.",
+    "avoidWhen": "Real data cannot support the proposed interaction or causal story."
+  },
+  {
+    "id": "integration-lab",
+    "purpose": "Runnable React, motion, GSAP, and WebGL integration",
+    "archetypes": [],
+    "technologies": [
+      "react",
+      "typescript",
+      "vite",
+      "tailwind",
+      "glsl"
+    ],
+    "files": [
+      "package.json",
+      "vite.config.ts",
+      "lab.tsx",
+      "lab.css"
+    ],
+    "useWhen": "Verifying a recipe's integration or fallback contract.",
+    "avoidWhen": "Choosing a finished marketing-site art direction."
   }
 ]

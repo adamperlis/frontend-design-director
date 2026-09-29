@@ -12,24 +12,24 @@ The examples are optional ingredients, not rules. Search [`../examples/pattern-i
 
 Do not add a dependency solely because an example uses it. Translate the underlying behavior into the project’s existing stack when practical.
 
-## Runnable foundation
+## Runnable studies
 
-`examples/vanilla/` is a complete dependency-free page with:
+Open `examples/index.html` for the gallery. Four distinct studies work without a build:
 
-- accessible responsive navigation;
-- asymmetric hero with live product panel;
-- proof strip and workflow chapters;
-- tabs implemented as progressive enhancement;
-- pricing cards and final action;
-- fluid type and spacing tokens;
-- reduced-motion and high-contrast considerations;
-- a subtle pointer spotlight that disappears on touch/reduced motion.
+- `vanilla/`: Northstar, an evidence workspace with linked notes, dissent, explanations, and a reversible sample commitment. Without JavaScript, all evidence stays visible and anchors work normally.
+- `commerce/`: Lilt, a physical product with an original SVG object, native finish selection, sample bag feedback, specifications, and disclosures.
+- `developer/`: Relay, a technical instrument with request/response fixtures for success, retry, and rejection. No external API is called.
+- `research/`: Fieldwork, an editorial research narrative with a keyboard-operable range input that changes synthetic noise on a labeled chart.
 
-Use it to inspect semantic structure or borrow isolated patterns. Replace all sample copy, data, colors, and proportions.
+Each study has its own hierarchy, proof format, and visual system. See [composition-recipes.md](composition-recipes.md) for why those choices fit the example. Replace all sample content and assumptions before real use. These are fictional demonstrations, not working businesses.
+
+## Integration lab
+
+From `examples/`, run `bun install --frozen-lockfile`, then `bun run dev` and open `/lab.html`. `bun run build` typechecks the recipes and builds all pages. The lab mounts two independent tab sets, ProductStory in a form, a reveal, a magnetic link, the WebGL field, and a GSAP scroll sequence. See [verification.md](verification.md) for actual tested states rather than assuming all recipes are fully verified.
 
 ## React and Tailwind
 
-`examples/react/MarketingPatterns.tsx` includes composable primitives for an asymmetric hero, product window, chapter, metric band, pricing matrix, and final CTA. The file uses Tailwind utility classes but keeps data and children injectable.
+`examples/react/MarketingPatterns.tsx` contains structural sketches for hero, product window, chapter, metrics, pricing, and CTA. They are not the preferred visual identity. Prefer the complete studies when choosing art direction. The file uses Tailwind utility classes with injectable content and optional `--pattern-radius` / `--pattern-accent` overrides.
 
 `examples/react/MotionPatterns.tsx` contains Framer Motion examples for section reveals, a magnetic action, layout tabs, and an accessible product-story sequence. Motion is disabled or simplified when reduced motion is requested.
 
@@ -39,17 +39,17 @@ Use it to inspect semantic structure or borrow isolated patterns. Replace all sa
 
 ## WebGL and shaders
 
-`examples/webgl/AtmosphereCanvas.tsx` is an R3F canvas with a static CSS fallback, DPR cap, visibility pausing, reduced-motion handling, and conservative shader math.
+`examples/webgl/AtmosphereCanvas.tsx` is an R3F material study with a static CSS fallback, error boundary, context-loss handling, DPR cap, document/offscreen pausing, and reduced-motion handling. Read [the integration instructions](../examples/webgl/README.md) before copying it. The `?raw` shader imports require Vite or an equivalent configured loader.
 
 - `atmosphere.vert`: low-amplitude vertex displacement.
 - `atmosphere.frag`: an original soft spectral field with grain and pointer focus.
-- `halftone.frag`: a subject-derived print/data treatment for image or render passes.
+- `halftone.frag`: a print/data fragment requiring texture/uniform integration; it is not a runnable effect by itself.
 
 WebGL is appropriate when it communicates material, space, motion, or a core metaphor. It is usually wrong for routine feature sections, forms, pricing, or text-heavy pages.
 
 ## Archetype starters
 
-`examples/starters/archetypes.ts` defines original section blueprints and proof types for all six archetypes. `examples/starters/ArchetypePage.tsx` renders those blueprints as a semantic React page shell. Treat the sequences as prompts and rearrange them to match the actual buying journey.
+`examples/starters/archetypes.ts` defines section blueprints and proof types for six archetypes. `ArchetypePage.tsx` is explicitly a planning wireframe, with a `renderProof` slot and `className` override. It is not six art-directed pages. Use the sequences as prompts, replace planning copy, and supply a project-specific composition.
 
 ## Adaptation checklist
 
@@ -59,4 +59,3 @@ WebGL is appropriate when it communicates material, space, motion, or a core met
 - Verify keyboard order, labels, focus visibility, touch behavior, and reduced motion.
 - Test static fallback before approving an effect.
 - Profile hero media and WebGL on a mid-range mobile device.
-

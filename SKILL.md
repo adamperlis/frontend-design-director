@@ -1,5 +1,7 @@
 ---
 name: frontend-design-director
+metadata:
+  version: 0.2.0
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -20,17 +22,25 @@ Identify the primary archetype and buying condition. If the brief spans categori
 | Research / science / editorial | “I grasp why this matters and trust the work.” | narrative, diagrams, publications, people | [research-editorial.md](references/research-editorial.md) |
 | Portfolio / studio / launch | “This point of view is memorable.” | art direction, selected work, one governing metaphor | [portfolio-experimental.md](references/portfolio-experimental.md) |
 
-When uncertain, read [routing.md](references/routing.md). For inner pages, read [page-archetypes.md](references/page-archetypes.md).
+When uncertain, read [routing.md](references/routing.md). For inner pages, read [page-archetypes.md](references/page-archetypes.md) and the relevant [inner-page composition study](references/studies/inner-page-studies.md).
 
 ## Working method
 
 1. Write a one-sentence concept: “This site should feel like **X** because the audience needs to believe **Y**.”
-2. Select two relevant references from [reference-library.md](references/reference-library.md): one for information architecture, one for expressive treatment. Never average five sites together.
+2. Choose a small set of relevant references from [reference-library.md](references/reference-library.md). Read the matching measured examples in [visual-studies.md](references/studies/visual-studies.md). Check their evidence level: an extracted heading list cannot substantiate a visual or interaction claim. References can support architecture, expression, or a particular behavior; there is no required number.
 3. Establish the page’s job, conversion, proof burden, and one dominant visual idea before choosing components.
 4. Draft the section sequence in plain language. Every section must advance understanding, proof, differentiation, or action; remove sections that only restate the hero.
-5. Define a small token system before implementation: canvas, surface, ink, muted ink, accent, border, type roles, radius logic, spacing rhythm, and motion character.
+5. Sketch two plausible compositions before committing to a showcase design. Choose the one that best explains this product. Record actual type sizes and line lengths, grid proportions, image crops, section transitions, and mobile ordering. Use [composition-recipes.md](references/composition-recipes.md) for concrete, optional examples. A token list alone is insufficient art direction.
 6. Build the semantic skeleton and responsive hierarchy first. Add expressive media and motion only after the page reads correctly without them.
-7. Verify with [quality-gates.md](references/quality-gates.md). If animation materially shapes the experience, also read [motion.md](references/motion.md).
+7. Verify with [quality-gates.md](references/quality-gates.md). Save rendered desktop and mobile evidence and exercise the focal interaction. Record failures and revise before calling a page reviewed. If animation materially shapes the experience, also read [motion.md](references/motion.md).
+
+## Calibrate the claim to the evidence
+
+The library is under active evaluation. It is not proven better than Claude's default frontend skill. The initial Northstar example failed because its visual vocabulary was generic and its product states did not demonstrate the claim. The replacement studies and [audit record](references/audit-and-evaluation.md) document the corrective work.
+
+For product demos, specify an input, a user action, and a visible consequence. Include disagreement, failure, uncertainty, or limits where those affect the decision. Fictional examples must identify sample data. Never add invented customer metrics to make a layout look credible.
+
+For reference research, preserve the navigation URL including anchors, discovery source, retrieval status, visual-review status, viewport, and interaction notes. A queued clone job, fetched sitemap, or captured screenshot awaiting review is not a completed study. Use the [coverage ledger](references/studies/coverage.md); leave blocked items visible.
 
 ## Borrowable implementation examples
 
@@ -42,7 +52,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 - Copy the behavior, then rewrite the visual language and content for the project.
 - Preserve semantic HTML, keyboard behavior, reduced-motion fallbacks, and static fallbacks when adapting an example.
 
-## Non-negotiable design rules
+## Design heuristics to adapt
 
 - Give each page one dominant idea. Repetition creates identity; unrelated tricks create noise.
 - Show the product, object, evidence, or thesis in the first viewport. A generic gradient is not product proof.
