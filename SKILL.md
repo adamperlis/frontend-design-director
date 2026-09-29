@@ -5,7 +5,7 @@ description: Design, build, or critique distinctive marketing websites and produ
 
 # Frontend Design Director
 
-Create a coherent design argument, not a decorated template. Preserve an existing brand or design system when one exists; these references supply reasoning and structure, never someone else’s identity, copy, assets, or signature composition.
+Create a coherent design argument, not a decorated template. Preserve an existing brand or design system when one exists; these references supply reasoning and structure, never someone else’s identity, copy, assets, or signature composition. All recipes and code samples are optional starting points: adapt, combine, or ignore them when the product, repository, or audience calls for a different answer.
 
 ## Route before designing
 
@@ -31,6 +31,16 @@ When uncertain, read [routing.md](references/routing.md). For inner pages, read 
 5. Define a small token system before implementation: canvas, surface, ink, muted ink, accent, border, type roles, radius logic, spacing rhythm, and motion character.
 6. Build the semantic skeleton and responsive hierarchy first. Add expressive media and motion only after the page reads correctly without them.
 7. Verify with [quality-gates.md](references/quality-gates.md). If animation materially shapes the experience, also read [motion.md](references/motion.md).
+
+## Borrowable implementation examples
+
+When the task includes implementation, read [code-library.md](references/code-library.md), then inspect only the relevant files under `examples/`. The library includes a runnable vanilla HTML/CSS/JavaScript page, reusable React and Tailwind patterns, Framer Motion and GSAP interactions, WebGL/React Three Fiber shaders, and code-shaped page starters for all six archetypes.
+
+- Treat examples as ingredients, not a required stack or visual system.
+- Prefer the target repository’s framework, tokens, dependencies, and conventions.
+- Start with the lowest-complexity pattern that expresses the idea; upgrade DOM/CSS to canvas or WebGL only when it materially improves explanation or identity.
+- Copy the behavior, then rewrite the visual language and content for the project.
+- Preserve semantic HTML, keyboard behavior, reduced-motion fallbacks, and static fallbacks when adapting an example.
 
 ## Non-negotiable design rules
 
