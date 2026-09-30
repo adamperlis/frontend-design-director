@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.3.2
+  version: 0.3.3
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -67,6 +67,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 - Make typography carry hierarchy. Use no more type styles than the content model needs, and keep line lengths intentional.
   For Adam's projects, the current preference is a maximum of two loaded font families unless he explicitly overrides it. This is a project preference, not a universal design law.
 - Let the interface explain itself. Product visuals need legible states, realistic data, and a clear focal task—not decorative dashboard confetti.
+- Choose interface icons from the full [26-set catalog](references/iconography.md): all 25 sets Adam supplied plus IBM Carbon. There is no default icon family; select by the project's art direction, required glyphs, stack, and verified license. Keep one coherent family and sizing/weight system per interface, respect existing design systems, and avoid improvised Unicode/emoji UI substitutes. Radix in the examples is just one implementation, not a prescribed choice. Icons support the UI; they do not replace product evidence.
 - Mobile is a recomposition. Preserve the concept while changing crop, order, density, and interaction; do not merely stack desktop columns.
 - Respect `prefers-reduced-motion`; never gate meaning behind hover, scroll choreography, or a canvas effect.
 - Do not reproduce reference copy, trademarks, imagery, proprietary UI, or a recognizable page wholesale. Abstract the principle and create original work.

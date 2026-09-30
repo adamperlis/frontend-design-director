@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
+import { AppIcon, WindowDots } from "./Icons";
 import {
   CursorGrid,
   LinearGrid,
@@ -181,7 +182,7 @@ function CursorStudy() {
         <div className="overflow-hidden rounded-t-xl border border-[#11130d] bg-[#171810] shadow-[0_30px_80px_#25282050]">
           <div className="relative flex h-7 items-center justify-center border-b border-[#313228] text-[12px] text-[#92958b]">
             <span className="absolute left-3 tracking-[4px] text-[#3f4136]">
-              ●●●
+              <WindowDots />
             </span>
             Fieldnote desktop · sample data
           </div>
@@ -201,7 +202,8 @@ function CursorStudy() {
                   className={`mb-1 w-full rounded p-2 text-left transition-colors hover:bg-[#292c21] ${task === i ? "bg-[#26291f]" : "text-[#92958b]"}`}
                 >
                   <span className="block">
-                    {task === i ? "◉" : "○"}　{t.title}
+                    <AppIcon name={task === i ? "target" : "pending"} />{" "}
+                    {t.title}
                   </span>
                   <span className="mt-1 block truncate pl-5 text-[11px] text-[#777b6c]">
                     {i === 0
@@ -214,7 +216,7 @@ function CursorStudy() {
                 Your workspace
                 <br />
                 <span className="mt-2 block text-[#b3b6a8]">
-                  ＋ New document
+                  <AppIcon name="plus" /> New document
                 </span>
               </p>
             </aside>
@@ -250,10 +252,12 @@ function CursorStudy() {
                 I've put the useful details first and kept the language direct.
               </p>
               <div className="mt-3 rounded-md border border-[#393d30] bg-[#202419] px-3 py-2">
-                ▤ {current.file} <span className="text-[#7aab84]">+24</span>
+                <AppIcon name="file" /> {current.file}{" "}
+                <span className="text-[#7aab84]">+24</span>
               </div>
               <div className="mt-2 rounded-md border border-[#393d30] bg-[#202419] px-3 py-2">
-                ▤ outline.md <span className="text-[#7aab84]">+8</span>
+                <AppIcon name="file" /> outline.md{" "}
+                <span className="text-[#7aab84]">+8</span>
               </div>
               <div className="mt-auto pt-8">
                 <button
@@ -274,7 +278,9 @@ function CursorStudy() {
             </div>
             <div className="min-w-0">
               <div className="flex h-8 items-center gap-4 border-b border-[#303229] bg-[#1e2118] px-4 text-[11px] text-[#a0a594]">
-                ←　→　↻{" "}
+                <AppIcon name="back" />
+                <AppIcon name="arrow" />
+                <AppIcon name="reload" />{" "}
                 <span className="truncate">
                   fieldnote.local / {current.file}
                 </span>
@@ -430,20 +436,35 @@ function LinearStudy() {
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[18%] bg-gradient-to-l from-[#08090a] to-transparent max-sm:hidden" />
         <div className="grid min-h-[570px] grid-cols-[238px_1fr] max-md:grid-cols-[170px_1fr] max-sm:grid-cols-1">
           <aside className="border-r border-[#292a2d] bg-[#151618] px-5 py-5 text-[13px] text-[#acadb3] max-sm:hidden">
-            <p className="mb-6 font-bold text-[#dddde0]">◒ Tandem　⌄</p>
+            <p className="mb-6 font-bold text-[#dddde0]">
+              Tandem <AppIcon name="chevron" />
+            </p>
             <div className="space-y-4">
-              <p>⌁　Pulse</p>
               <p>
-                ▱　Inbox <span className="float-right text-[#62646c]">3</span>
+                <AppIcon name="activity" /> Pulse
               </p>
-              <p>◉　My work</p>
-              <p>◇　Reviews</p>
+              <p>
+                <AppIcon name="inbox" /> Inbox{" "}
+                <span className="float-right text-[#62646c]">3</span>
+              </p>
+              <p>
+                <AppIcon name="target" /> My work
+              </p>
+              <p>
+                <AppIcon name="checked" /> Reviews
+              </p>
             </div>
             <p className="mb-3 mt-10 text-[11px] text-[#666870]">Workspace</p>
-            <p className="mb-4">▧　Initiatives</p>
-            <p>▦　Projects</p>
+            <p className="mb-4">
+              <AppIcon name="layers" /> Initiatives
+            </p>
+            <p>
+              <AppIcon name="grid" /> Projects
+            </p>
             <p className="mb-3 mt-10 text-[11px] text-[#666870]">Your teams</p>
-            <p>◈　Experience</p>
+            <p>
+              <AppIcon name="person" /> Experience
+            </p>
             <div className="mt-4 space-y-3 pl-6 text-[12px] text-[#777983]">
               <p>Issues</p>
               <p>Current cycle</p>
@@ -452,7 +473,9 @@ function LinearStudy() {
           </aside>
           <div className="min-w-0">
             <div className="flex h-[52px] items-center gap-3 border-b border-[#292a2d] px-6 text-[12px]">
-              <span className="text-[#d6c752]">◐</span>
+              <span className="text-[#d6c752]">
+                <AppIcon name="pending" />
+              </span>
               <span className="text-[#84858d]">EXP-{214 + issue}</span>
               <span className="truncate">{issues[issue]}</span>
               <span className="ml-auto pr-10 text-[#64666e]">
@@ -486,7 +509,8 @@ function LinearStudy() {
                       </p>
                       {issueDetails[issue].checks.map((check, i) => (
                         <p key={check} className={i === 0 ? "mt-3" : ""}>
-                          {i < 2 ? "☑" : "☐"} {check}
+                          <AppIcon name={i < 2 ? "checked" : "unchecked"} />{" "}
+                          {check}
                         </p>
                       ))}
                     </div>
@@ -556,9 +580,15 @@ function LinearStudy() {
                     <option>Done</option>
                   </select>
                 </label>
-                <p className="mt-5">◉　Maya Chen</p>
-                <p className="mt-5">▥　Medium</p>
-                <p className="mt-5">◇　Experience</p>
+                <p className="mt-5">
+                  <AppIcon name="person" /> Maya Chen
+                </p>
+                <p className="mt-5">
+                  <AppIcon name="priority" /> Medium
+                </p>
+                <p className="mt-5">
+                  <AppIcon name="layers" /> Experience
+                </p>
                 <p className="mt-10 text-[#5e606b]" aria-live="polite">
                   {status}
                 </p>
@@ -598,7 +628,8 @@ function LinearStudy() {
               {["New requests", "Under review", "Planned"].map((column, c) => (
                 <div key={column}>
                   <p className="mb-4 text-[12px] text-[#999dab]">
-                    ◌　{column}　<span className="text-[#555b6a]">{4 - c}</span>
+                    <AppIcon name="pending" /> {column}　
+                    <span className="text-[#555b6a]">{4 - c}</span>
                   </p>
                   {issues.map((title, i) => (
                     <div
@@ -612,7 +643,8 @@ function LinearStudy() {
                         {title}
                       </p>
                       <p className="mt-5 text-[10px] text-[#6d7587]">
-                        ◇ Experience　　◉
+                        <AppIcon name="layers" /> Experience　
+                        <AppIcon name="person" />
                       </p>
                     </div>
                   ))}
@@ -623,7 +655,9 @@ function LinearStudy() {
           <div className="relative z-10 mt-[75px] w-[470px] rounded-xl border border-[#3b3e49] bg-[#191b21] shadow-[0_30px_80px_#0009] max-sm:mt-8 max-sm:w-full">
             <div className="border-b border-[#30333e] px-5 py-4 text-[13px] text-[#c4c6d0]">
               # product-feedback{" "}
-              <span className="float-right text-[#656b7a]">⌕</span>
+              <span className="float-right text-[#656b7a]">
+                <AppIcon name="search" />
+              </span>
             </div>
             <div className="p-6">
               <p className="text-[12px] text-[#d1d3dd]">
@@ -646,25 +680,24 @@ function LinearStudy() {
                   Preserve the current view on refresh
                 </p>
                 <p className="mt-3 text-[11px] text-[#929aaf]">
-                  ◐ In progress　　◉ Maya Chen
+                  <AppIcon name="pending" /> In progress　
+                  <AppIcon name="person" /> Maya Chen
                 </p>
               </div>
               <button
                 onClick={() => {
                   setIssue(0);
                   setStatus("In progress");
-                  document
-                    .getElementById("product")
-                    ?.scrollIntoView({
-                      behavior: matchMedia("(prefers-reduced-motion: reduce)")
-                        .matches
-                        ? "instant"
-                        : "smooth",
-                    });
+                  document.getElementById("product")?.scrollIntoView({
+                    behavior: matchMedia("(prefers-reduced-motion: reduce)")
+                      .matches
+                      ? "instant"
+                      : "smooth",
+                  });
                 }}
                 className="mt-5 rounded border border-[#51576a] bg-[#2c3241] px-4 py-2 text-[12px] text-[#e0e4ee] hover:bg-[#394257]"
               >
-                Open linked request ↗
+                Open linked request <AppIcon name="external" />
               </button>
             </div>
           </div>
@@ -694,7 +727,9 @@ function LinearStudy() {
               <span className="hidden text-[12px] text-[#686b78] sm:block">
                 Experience
               </span>
-              <span className="text-[#777d90]">↗</span>
+              <span className="text-[#777d90]">
+                <AppIcon name="external" />
+              </span>
             </button>
           ))}
         </div>
@@ -803,7 +838,9 @@ function FirecrawlStudy() {
                 Page URL
               </label>
               <div className="flex items-center gap-3 border-b border-[#efefef] p-2 pb-4">
-                <span className="text-[#b4b4b4]">◎</span>
+                <span className="text-[#777]">
+                  <AppIcon name="globe" />
+                </span>
                 <input
                   id="page-url"
                   value={url}
@@ -819,7 +856,7 @@ function FirecrawlStudy() {
                   aria-label="Run sample extraction"
                   className="rounded-lg bg-[#ff6500] px-4 py-2 text-[#321400] hover:bg-[#e45a00]"
                 >
-                  →
+                  <AppIcon name="arrow" />
                 </button>
               </div>
               <div className="flex items-center gap-1 pt-3">
@@ -1039,7 +1076,7 @@ function ElevenLabsStudy() {
                   />
                   {voice === i && (
                     <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-black shadow-sm">
-                      {playing ? "Ⅱ" : "▶"}
+                      <AppIcon name={playing ? "pause" : "play"} size={20} />
                     </span>
                   )}
                   <span className="sr-only">{v}</span>

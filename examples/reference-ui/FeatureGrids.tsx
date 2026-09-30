@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./feature-grids.css";
+import { AppIcon, WindowDots } from "./Icons";
 
 // Original UI scenes. Clipping belongs to illustration layers, never controls.
 function Cell({
@@ -26,7 +27,7 @@ function Cell({
 function Chrome({ children }: { children: React.ReactNode }) {
   return (
     <div className="fg-chrome">
-      <span aria-hidden="true">● ● ●</span>
+      <WindowDots />
       {children}
     </div>
   );
@@ -151,7 +152,7 @@ export function CursorGrid() {
               <footer>Research notes · product review</footer>
             </div>
             <div className="fg-source-label">
-              ↳ Linked to release-notes.md, line 18
+              <AppIcon name="link" /> Linked to release-notes.md, line 18
             </div>
           </div>
         </Cell>
@@ -248,9 +249,15 @@ export function LinearGrid() {
                 <span className="fg-tag">Mobile</span>
               </div>
               <footer>
-                {routed
-                  ? "◉ Assigned to Maya · Experience"
-                  : "◌ Unassigned · Needs a team"}
+                {routed ? (
+                  <>
+                    <AppIcon name="person" /> Assigned to Maya · Experience
+                  </>
+                ) : (
+                  <>
+                    <AppIcon name="pending" /> Unassigned · Needs a team
+                  </>
+                )}
               </footer>
             </div>
             <div className="fg-route-line" aria-hidden="true" />
@@ -277,9 +284,11 @@ export function LinearGrid() {
               {["Urgent", "High", "Medium", "Low"].map((p, i) => (
                 <div className={priority === p ? "chosen" : ""} key={p}>
                   <span>
-                    {["▰", "▥", "▥", "▂"][i]}　{p}
+                    <AppIcon name="priority" /> {p}
                   </span>
-                  <span>{priority === p ? "✓" : i + 1}</span>
+                  <span>
+                    {priority === p ? <AppIcon name="check" /> : i + 1}
+                  </span>
                 </div>
               ))}
             </div>
@@ -346,16 +355,21 @@ export function LinearGrid() {
               <Chrome>Mobile / Release candidate</Chrome>
               <h4>Focus stays where you left it.</h4>
               <div className="fg-check-row">
-                <span>✓ Keyboard navigation</span>
+                <span>
+                  <AppIcon name="check" /> Keyboard navigation
+                </span>
                 <small>Reviewed by Maya</small>
               </div>
               <div className="fg-check-row">
-                <span>✓ Screen reader labels</span>
+                <span>
+                  <AppIcon name="check" /> Screen reader labels
+                </span>
                 <small>Reviewed by Alex</small>
               </div>
               <div className="fg-check-row">
                 <span>
-                  {approved ? "✓ Release approval" : "◌ Release approval"}
+                  <AppIcon name={approved ? "check" : "pending"} /> Release
+                  approval
                 </span>
                 <small>
                   {approved ? "Approved in this fixture" : "Waiting for you"}
@@ -463,7 +477,9 @@ export function FirecrawlGrid() {
                   <code>{type}</code>
                 </div>
               ))}
-              <footer>✓ 4 fields validated in fixture</footer>
+              <footer>
+                <AppIcon name="check" /> 4 fields validated in fixture
+              </footer>
             </div>
           </div>
         </Cell>
@@ -476,11 +492,13 @@ export function FirecrawlGrid() {
             <div className="fg-field-value">
               <small>title</small>
               <h4>A field guide</h4>
-              <span>↳ article &gt; h1</span>
+              <span>
+                <AppIcon name="link" /> article &gt; h1
+              </span>
             </div>
             <div className="fg-provenance-line" />
             <div className="fg-source-url">
-              ↗ example.com/field-guide
+              <AppIcon name="external" /> example.com/field-guide
               <br />
               <small>Source retained in sample output</small>
             </div>

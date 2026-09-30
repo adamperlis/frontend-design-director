@@ -40,6 +40,8 @@ From `examples/`, run `bun install --frozen-lockfile`, then `bun run dev` and op
 
 ## React and Tailwind
 
+For icons, read [iconography.md](iconography.md) and borrow `examples/reference-ui/Icons.tsx`. The current studies use Radix SVG components with accessible surrounding labels, not Unicode UI symbols. Use another coherent family when the project calls for it.
+
 `examples/react/MarketingPatterns.tsx` contains structural sketches for hero, product window, chapter, metrics, pricing, and CTA. They are not the preferred visual identity. Prefer the complete studies when choosing art direction. The file uses Tailwind utility classes with injectable content and optional `--pattern-radius` / `--pattern-accent` overrides.
 
 `examples/react/MotionPatterns.tsx` contains Framer Motion examples for section reveals, a magnetic action, layout tabs, and an accessible product-story sequence. Motion is disabled or simplified when reduced motion is requested.

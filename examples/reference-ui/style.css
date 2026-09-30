@@ -1,5 +1,23 @@
 @import "tailwindcss";
 @source "./main.tsx";
+.ui-icon {
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+  margin-right: 0.3em;
+}
+.ui-window-dots {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.ui-window-dots i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
 @layer base {
   html {
     font-family: Arial, Helvetica, sans-serif;
