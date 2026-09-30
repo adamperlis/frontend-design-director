@@ -70,6 +70,8 @@ Reference reasoning: the measured Linear study supports persistent work objects 
 
 ### Borrowable implementation
 
+For actual **page-level UI-filled feature grids**, use [FeatureGrids.tsx](../examples/reference-ui/FeatureGrids.tsx) and [feature-grids.css](../examples/reference-ui/feature-grids.css). A kanban board inside one giant screenshot is not a feature grid. The four original examples separate a cell's claim, clipped illustrative scene, and uncropped controls; they vary spans by importance (7/5, 8/4, full-width review, then 6/6). Each cell contributes different evidence rather than repeating the same dashboard. On mobile, change scene offsets and text measures; preserve the compact two-column voice cell where it remains readable. These are optional design examples, not measured vendor grids or required layouts. Open each study at `#features`.
+
 Inspect [Cadence HTML](../examples/saas/index.html), [CSS](../examples/saas/style.css), and [state logic](../examples/saas/main.ts). Search for `hero-product-crop`, `feature-cell`, `mini-crop`, and `demo-disclosure`. Its linked source/task slot, date proposal, explicit approval, and reset are useful ingredients. Do not inherit its colors, launch premise, exact grid, or number of scenes by default.
 
 ```css

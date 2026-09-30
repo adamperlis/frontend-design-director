@@ -1,5 +1,15 @@
 # Local verification — 30 September 2026
 
+## Feature-grid follow-up
+
+Added 15 UI-filled cells: three writing/review scenes, four planning scenes, four extraction/delivery scenes, and four creative-production scenes. Chosen composition: unequal page-level cells with one distinct task per cell. Rejected alternative: another large workspace containing a kanban grid; that does not provide the requested feature-grid composition.
+
+The claim, cropped illustration, and reachable controls are separate layers. The grids are original adaptations, not newly verified vendor layouts. Desktop grid views were inspected at 1280×720; all four document widths were checked at 320px without horizontal overflow. The creative grid was also visually checked at 390px. The mobile writing diff was revised to wrap its focal sentence rather than clipping the meaningful edit.
+
+Exercised: accept edit, resolve comment, route request, change priority, approve sample release, simulate delivery, and invalidate a translation review after changing language. These are local state changes with visible consequences. Reduced-motion CSS disables waveform/playhead motion; a live reduced-motion and full keyboard audit remain unperformed. No source assets, audio, API requests, or backend integrations were added.
+
+## Initial study verification
+
 Scope: four original composition studies, not four full website clones. Compare with the [source evidence](../../references/studies/direct-ui-reconstruction.md).
 
 - Inspected all four opening desktop renders at 1280 × 720 and their corresponding source captures. Major heading/stage proportions intentionally follow the measured references; Arial, original copy, gradients, and fixture UI are substitutions, not pixel-perfect matches.

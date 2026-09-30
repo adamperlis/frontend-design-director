@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.3.1
+  version: 0.3.2
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 

@@ -4,7 +4,7 @@
     "purpose": "Four independent source-measured SaaS compositions: inset workspace, broad fading UI, operation grid, and nested audience-specific demonstrations",
     "archetypes": ["saas-ai", "developer-platform"],
     "technologies": ["react", "tailwind", "typescript", "css"],
-    "files": ["reference-ui/index.html", "reference-ui/main.tsx", "reference-ui/style.css", "reference-ui/README.md", "../references/studies/direct-ui-reconstruction.md"],
+    "files": ["reference-ui/index.html", "reference-ui/main.tsx", "reference-ui/style.css", "reference-ui/FeatureGrids.tsx", "reference-ui/feature-grids.css", "reference-ui/README.md", "../references/studies/direct-ui-reconstruction.md"],
     "useWhen": "A reference-led product page needs concrete UI density, cropping, and distinct demonstration formats. Select a study rather than combining all four into a generic template.",
     "avoidWhen": "Pixel-identical vendor reproduction or recovered proprietary source is required. Mobile adaptations and local fixture logic are original, not source-verified."
   },

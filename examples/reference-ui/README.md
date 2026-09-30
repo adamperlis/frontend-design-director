@@ -6,6 +6,7 @@ Run the existing examples Vite server, then open `reference-ui/index.html`. Open
 
 ## Code to borrow
 
+- `FeatureGrids.tsx` + `feature-grids.css`: fifteen original UI-filled cells across four page-level feature grids, with unequal spans, crop layers, edge fades, and local interactions. Jump to `#features` or use the visible UI feature grids link. These are original extensions, not newly measured vendor layouts.
 - `main.tsx`: independent compositions and their local interaction state, divided by source comments.
 - `style.css`: Tailwind entry, focus treatment, two-family typography, and reduced-motion fallback.
 - `responsive-review.html`: actual iframe viewports (320 / 390 / 768 / 1280), study switching, document-overflow measurement.

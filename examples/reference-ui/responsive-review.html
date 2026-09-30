@@ -46,7 +46,7 @@
       </select></label
     ><button data-width="320">320</button><button data-width="390">390</button
     ><button data-width="768">768</button><button data-width="1280">1280</button
-    ><output id="metrics"></output>
+    ><button id="grid">Show feature grid</button><output id="metrics"></output>
   </header>
   <iframe
     src="./index.html?study=cursor"
@@ -70,7 +70,10 @@
       measure();
     });
     choice.addEventListener("change", () => {
-      frame.src = `./index.html?study=${choice.value}`;
+      frame.src = `./index.html?study=${choice.value}#features`;
+    });
+    document.querySelector("#grid").addEventListener("click", () => {
+      frame.src = `./index.html?study=${choice.value}#features`;
     });
     document.querySelectorAll("[data-width]").forEach((button) =>
       button.addEventListener("click", () => {

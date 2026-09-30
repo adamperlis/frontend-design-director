@@ -27,6 +27,7 @@ Each study has its own hierarchy, proof format, and visual system. See [composit
 
 ## Product-led SaaS and cinematic studies
 
+- `examples/reference-ui/FeatureGrids.tsx` and `feature-grids.css`: 15 original UI-filled feature cells across four distinct grids. Borrow the separating layers (claim / cropped art / reachable controls), code diff, linked request, priority menu, schema, delivery event, audio editor, and review invalidation. Direct links use `?study=elevenlabs#features` (or cursor, linear, firecrawl). These extend the inspected compositions; they are not recovered vendor components.
 - `examples/saas/`: Cadence, rebuilt under Frontend Design Director with exactly two loaded font families. Four purpose-built UI slots: working schedule/change preview, source-to-task fragments, an inspectable handoff canvas, and a release gate. Borrow the proposed/applied state separation, invalidation of earlier reviews, keyboard tabs, pricing calculation, and scroll-drawn SVG route. On mobile the schedule becomes dated cards. Run through Vite; read its `DIRECTION.md` and `REVIEW.md` before adapting it. No backend or real integrations.
 - `examples/luma-directed/`: an object-first physical-product study with a persistent Three.js instrument and material selection. This is a different proof strategy from Cadence, not a required visual treatment for SaaS.
 - `examples/cinematic/`: the earlier cinematic proposal, retained for comparison rather than presented as the current direction.

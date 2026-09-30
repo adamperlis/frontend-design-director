@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
+import {
+  CursorGrid,
+  LinearGrid,
+  FirecrawlGrid,
+  ElevenGrid,
+} from "./FeatureGrids";
 
 type Study = "cursor" | "linear" | "firecrawl" | "elevenlabs";
 const studies: Study[] = ["cursor", "linear", "firecrawl", "elevenlabs"];
@@ -51,19 +57,31 @@ function StudyDock({ study }: { study: Study }) {
   const [open, setOpen] = useState(false);
   const interacted = useRef(false);
   useEffect(() => {
-    if (interacted.current) document.getElementById(open ? 'study' : 'study-toggle')?.focus();
+    if (interacted.current)
+      document.getElementById(open ? "study" : "study-toggle")?.focus();
   }, [open]);
   if (!open)
     return (
-      <button
-        id="study-toggle"
-        aria-label="Open study selector"
-        aria-expanded={false}
-        onClick={() => { interacted.current = true; setOpen(true); }}
-        className="fixed bottom-3 right-3 z-50 rounded-lg border border-[#ccc] bg-[#f8f8f4] px-3 py-2 text-[11px] text-[#555] shadow-sm"
-      >
-        Studies ↗
-      </button>
+      <>
+        <a
+          href="#features"
+          className="fixed bottom-3 left-3 z-50 rounded-lg border border-[#ccc] bg-[#f8f8f4] px-3 py-2 text-[11px] text-[#555] shadow-sm"
+        >
+          UI feature grids ↓
+        </a>
+        <button
+          id="study-toggle"
+          aria-label="Open study selector"
+          aria-expanded={false}
+          onClick={() => {
+            interacted.current = true;
+            setOpen(true);
+          }}
+          className="fixed bottom-3 right-3 z-50 rounded-lg border border-[#ccc] bg-[#f8f8f4] px-3 py-2 text-[11px] text-[#555] shadow-sm"
+        >
+          Studies ↗
+        </button>
+      </>
     );
   return (
     <aside className="fixed bottom-3 left-1/2 z-50 flex w-[calc(100%-24px)] max-w-[590px] -translate-x-1/2 items-center gap-2 rounded-xl border border-[#d8d8d3] bg-[#f8f8f4]/95 p-2 text-[12px] text-[#292923] shadow-[0_6px_30px_#0003] backdrop-blur-md">
@@ -80,7 +98,11 @@ function StudyDock({ study }: { study: Study }) {
       <select
         id="study"
         value={study}
-        onChange={(e) => location.assign(`?study=${e.target.value}`)}
+        onChange={(e) =>
+          location.assign(
+            `?study=${e.target.value}${location.hash === "#features" ? "#features" : ""}`,
+          )
+        }
         className="min-w-0 flex-1 rounded-md border border-[#d9d9d2] bg-white p-2 capitalize"
       >
         {studies.map((s) => (
@@ -298,6 +320,7 @@ function CursorStudy() {
           </p>
         </div>
       </section>
+      <CursorGrid />
       <Evidence id="evidence" dark>
         Borrowed structure: quiet 26px proposition, image-ground stage, 20/32/48
         product panes. Original gradient ground, type substitute, product, and
@@ -632,7 +655,12 @@ function LinearStudy() {
                   setStatus("In progress");
                   document
                     .getElementById("product")
-                    ?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+                    ?.scrollIntoView({
+                      behavior: matchMedia("(prefers-reduced-motion: reduce)")
+                        .matches
+                        ? "instant"
+                        : "smooth",
+                    });
                 }}
                 className="mt-5 rounded border border-[#51576a] bg-[#2c3241] px-4 py-2 text-[12px] text-[#e0e4ee] hover:bg-[#394257]"
               >
@@ -671,6 +699,7 @@ function LinearStudy() {
           ))}
         </div>
       </section>
+      <LinearGrid />
       <Evidence id="notes" dark>
         Borrowed structure: 64px left-aligned proposition, a full-width
         continuous workspace, edge fade, then a split 48px/26px chapter.
@@ -880,6 +909,7 @@ function FirecrawlStudy() {
           </div>
         </section>
       </div>
+      <FirecrawlGrid />
       <Evidence id="notes">
         Borrowed structure: 1,112px instrument grid, 60/64 centered headline,
         orange action syntax, compact input leading to structured output. The
@@ -1165,6 +1195,7 @@ function ElevenLabsStudy() {
           </div>
         )}
       </section>
+      <ElevenGrid />
       <Evidence id="notes">
         Borrowed structure: 48/52 editorial title, 552px split columns,
         full-width product tabs and cropped media carousel. CSS orbs are
@@ -1201,6 +1232,10 @@ function Evidence({
   );
 }
 function App() {
+  useEffect(() => {
+    if (location.hash === "#features")
+      document.getElementById("features")?.scrollIntoView();
+  }, []);
   return (
     <>
       <div>
