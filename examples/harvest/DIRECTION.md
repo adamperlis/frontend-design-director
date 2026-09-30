@@ -8,7 +8,7 @@ Confirmed intake: user chose **“Design new product UI for this concept”** on
 
 - One Paper Mesh Gradient behind the main UI scene: muted warm colors, grain, low-speed light shift gives the stage a softer material quality than the previous flat ruled fill. UI remains fully opaque DOM above it. Not a Three.js scene; no need for 3D geometry here.
 - CSS ground remains for no JS, reduced motion, import/GPU failure, or context loss. Visible pause control, 600k pixel cap, runtime offscreen/tab-hidden suspension. No claim of measured mobile GPU performance.
-- Timer: start/stop changes button state with immediate feedback; numbers update without bouncing. Tabs: short scene entrance for pointer use; keyboard navigation changes instantly. Invoice: paper settles and status gains contrast when a local draft is created; reset reverses it. Hover movements only on fine pointers; active presses have feedback.
+- Timer: start/stop changes button state with immediate feedback; numbers update without bouncing. Tabs: short scene entrance for pointer use; keyboard navigation changes instantly. Invoice: shadow and status contrast change when a local draft is created; reset reverses them. The paper stays straight. Hover movements only on fine pointers; active presses have feedback.
 
 ## Design argument
 
@@ -18,7 +18,7 @@ Alternative considered: a full-height orange editorial hero with animated hours 
 
 ## Grid revision
 
-Applied 0.4.1: 8px layout rhythm; feature cards 24px outer radius and 24px copy inset; product frame 24px/8px/16px nested corners on mobile. Artwork is intentionally cropped and can extend past its safe text area. Mobile app-body inset is 16px (one full grid step smaller than desktop) to preserve usable text. Font budgets verified on complete cards including their UI illustrations: 12/16/24px, up to three weights. Hero 12/16/64px (40px mobile). Borders, optical letterspacing, intrinsic SVG logo dimensions, and Radix's 15px icon grid are exceptions to the layout spacing grid. Rotated illustrative documents intentionally break alignment; their containing slots stay on-grid. Debug overlay at `?inspect=1` shows the base grid, content-safe area and art bounds without changing the regular visitor view.
+Applied 0.4.1: 8px layout rhythm; feature cards 24px outer radius and 24px copy inset; product frame 24px/8px/16px nested corners on mobile. Artwork is intentionally cropped and can extend past its safe text area. Mobile app-body inset is 16px (one full grid step smaller than desktop) to preserve usable text. Font budgets verified on complete cards including their UI illustrations: 12/16/24px, up to three weights. Hero 12/16/64px (40px mobile). Borders, optical letterspacing, intrinsic SVG logo dimensions, and Radix's 15px icon grid are exceptions to the layout spacing grid. Updated in 0.4.2: all UI illustrations, documents and notification panels remain straight; decorative card rotation was removed at the user's request. Debug overlay at `?inspect=1` shows the base grid, content-safe area and art bounds without changing the regular visitor view.
 
 ## Geometry and references
 
