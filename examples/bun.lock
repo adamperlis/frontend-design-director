@@ -5,7 +5,9 @@
     "": {
       "name": "frontend-design-director-examples",
       "dependencies": {
+        "@fontsource-variable/geist-mono": "^5.3.0",
         "@fontsource-variable/onest": "5.3.1",
+        "@fontsource/anton": "^5.3.0",
         "@fontsource/besley": "5.3.0",
         "@paper-design/shaders": "0.0.81",
         "@paper-design/shaders-react": "0.0.81",
@@ -88,7 +90,11 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.28.2", "", { "os": "win32", "cpu": "x64" }, "sha512-5ebpxr3nWMzrL/rnUI755Jkuee0bHL/Gq0WTF9lvcpv73wAp5eu8MfBUgWK9bhWvZjj7yX8etf/8tI8Ney695g=="],
 
+    "@fontsource-variable/geist-mono": ["@fontsource-variable/geist-mono@5.3.0", "", {}, "sha512-vBbuwDEo9AkrqADMXOrlAR3DFcJi4/JxeuU43FoiQERnNwsfXNnvxvReZG02cQKmyk4DZkZdBZX3oTDvy2zBAw=="],
+
     "@fontsource-variable/onest": ["@fontsource-variable/onest@5.3.1", "", {}, "sha512-xaaw6G4HDB2/RczsWLD/2bnib4ykmQlTlBUN3GOEOiyErilZukQWVJG95h9zwAy0i8KY+QzDa+COPfqhI72Acw=="],
+
+    "@fontsource/anton": ["@fontsource/anton@5.3.0", "", {}, "sha512-OR1D5n124n2XRs66SbX7IjcOSptljEJE8FcDNnlni2y1/M6KpTx7cU2PIWzTSsBj4WFkHPw24On8qw3qkQZuTw=="],
 
     "@fontsource/besley": ["@fontsource/besley@5.3.0", "", {}, "sha512-PPbFdjy6oGeLEutwtf+Bsdj8ghHQEnTOtByu6BSL+R8N0Q5rfHtiShYffzB+GcQvxon89nu9yfoUqRTwA6LFmA=="],
 
