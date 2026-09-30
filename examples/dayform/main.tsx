@@ -9,10 +9,12 @@ import {
   PlayIcon,
 } from "@radix-ui/react-icons";
 import { mountPaperBackground } from "../webgl/paper-background";
+import workdayShader from "./workday.frag?raw";
 
 const cleanupBackground = mountPaperBackground(
   document.getElementById("paper-background")!,
   document.getElementById("background-toggle") as HTMLButtonElement,
+  { fragmentShader: workdayShader, speed: 0.65 },
 );
 if (import.meta.hot) import.meta.hot.dispose(cleanupBackground);
 

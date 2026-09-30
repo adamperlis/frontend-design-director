@@ -25,4 +25,4 @@ Example type budgets, not universal sizes:
 
 Inspect rendered padding, radii and computed typography. Measure visible text nodes at declared component boundaries; count sizes and weights, including metadata and buttons. Check a narrow viewport for overflow and crowded controls. A debugging overlay may expose an 8px grid and 24px safe areas, but it is not proof of compliance by itself. Record actual values and exceptions alongside screenshots. Keep this overlay out of the normal visitor experience.
 
-Harvest's `examples/harvest/grid-system.css` and `?inspect=1` preview show this approach. Do not copy its identity onto the next brand.
+Harvest's `examples/dayform/grid-system.css` and `?inspect=1` preview show this approach. Do not copy its identity onto the next brand.

@@ -42,3 +42,9 @@ Name the scene's job, UI focal point, chosen shader parameters, and why a CSS tr
 Under reduced motion, prefer the CSS fallback or one static frame. Continuous nonessential motion needs an accessible pause. Keep paused preference stable through tab changes. On mobile, simplify or remove the shader if it harms input responsiveness, legibility, battery, or thermals. A desktop screenshot does not establish phone GPU performance.
 
 Test: rendered shader, fallback, pause/resume, reduced motion, context failure, offscreen return, and legibility with the actual UI. Record unverified paths honestly. Never claim all those paths are tested because the guards exist in code.
+
+## Visibility is part of the composition
+
+If a shader is selected as a brand moment, give it enough exposed area and contrast to register. A canvas hidden almost entirely behind opaque UI does not establish a visual identity. Review the rendered result, not just whether a canvas mounted. Conversely, don't increase intensity behind body text to compensate for a poorly positioned scene.
+
+Harvest's revised `examples/dayform/workday.frag` is an original 48-strand illustration, grouped 24/16/8 to connect with a clearly labeled fictional project. It uses Paper's runtime, **not a Paper gallery preset or Three.js**. The exposed hero scene replaces the earlier mostly obscured Mesh Gradient. This is a candidate brand direction, not evidence of a completed rebrand or measured uniqueness.

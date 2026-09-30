@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.4.2
+  version: 0.4.3
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -68,6 +68,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 - Use composition before decoration: scale, placement, crop, rhythm, contrast, and whitespace do more work than shadows or effects.
 - For Adam's projects, keep UI cards, screenshots, documents, and notification panels straight and aligned to the grid. Do not add decorative rotation, skew, or perspective tilt—including on hover or during state transitions—unless he explicitly requests it. Create depth with crop, scale, layering and spacing instead. Older tilted examples are not a precedent to repeat.
 - Make the hero specific. Pair a sharp claim with a concrete visual or interaction that proves it.
+- Treat the hero as a unique brand moment: derive its visual idea, composition, copy and motion from this brand's particular story. Do not default to the same headline-plus-dashboard arrangement, serif accent, or abstract gradient. Product proof can follow the hero when that gives the identity room to establish itself. A new effect or palette alone is not a rebrand; assess whether the idea can extend coherently beyond the opening.
 - Alternate proof modes down the page: demonstration → metric → customer → mechanism → action. Avoid ten identical feature cards.
 - Match density to risk. Developer pages may be information-dense; luxury products need space; regulated products need calm clarity; experimental sites need a stable navigational spine.
 - Use accent color as syntax: action, state, category, or narrative emphasis. Do not sprinkle it randomly.

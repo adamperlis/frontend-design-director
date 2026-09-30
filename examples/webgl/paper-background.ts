@@ -4,6 +4,13 @@ import type { ShaderMount } from "@paper-design/shaders";
 export function mountPaperBackground(
   host: HTMLElement,
   control: HTMLButtonElement,
+  options: {
+    colors?: string[];
+    speed?: number;
+    distortion?: number;
+    swirl?: number;
+    fragmentShader?: string;
+  } = {},
 ) {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
   let shader: ShaderMount | undefined;
@@ -13,7 +20,7 @@ export function mountPaperBackground(
     loading = false;
   let canvas: HTMLCanvasElement | undefined;
   const sync = () => {
-    shader?.setSpeed(paused || reduce.matches ? 0 : 0.12);
+    shader?.setSpeed(paused || reduce.matches ? 0 : (options.speed ?? 0.12));
     control.hidden = !shader || failed || reduce.matches;
     control.textContent = paused
       ? "Play background motion"
@@ -45,15 +52,20 @@ export function mountPaperBackground(
         ShaderFitOptions,
       } = await import("@paper-design/shaders");
       if (disposed || reduce.matches) return;
-      const colors = ["#e6a16b", "#f1c4a0", "#e8ad7c", "#f5d9bd"];
+      const colors = options.colors ?? [
+        "#e6a16b",
+        "#f1c4a0",
+        "#e8ad7c",
+        "#f5d9bd",
+      ];
       shader = new ShaderMount(
         host,
-        meshGradientFragmentShader,
+        options.fragmentShader ?? meshGradientFragmentShader,
         {
           u_colors: colors.map(getShaderColorFromString),
           u_colorsCount: colors.length,
-          u_distortion: 0.7,
-          u_swirl: 0.15,
+          u_distortion: options.distortion ?? 0.7,
+          u_swirl: options.swirl ?? 0.15,
           u_grainMixer: 0.03,
           u_grainOverlay: 0.025,
           u_fit: ShaderFitOptions.cover,

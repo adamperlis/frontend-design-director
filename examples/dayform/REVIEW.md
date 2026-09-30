@@ -1,4 +1,8 @@
-# Harvest concept review — 2026-09-30
+# Dayform concept review — 2026-09-30
+
+## New brand / visible shader revision
+
+Renamed to Dayform at the user's request. Original stacked-work mark replaces the Harvest asset; all demo CTAs stay local. New name is provisional, not trademark/domain-cleared. An original `workday.frag` runs through Paper's runtime in an exposed hero artwork. Browser inspection at 1280px showed a ready shader and a visible 588 × 368px canvas, not hidden behind a UI panel. Pause/resume changed pressed state true/false. Mobile wrapper widths 320 and 390 showed no page overflow. Build passed. Hero evidence saved locally as `outputs/work/harvest-review/dayform-hero.png`; old folder name reflects iteration history. A subsequent mobile correction restores introductory copy and places artwork before that copy. Reduced-motion/context-loss code remains, not newly end-to-end tested. Historical review below applies to the earlier implementation, not a certification of a completed rebrand.
 
 Built with Frontend Design Director 0.4.1. Intake confirmed new product UI; no classic frontend-design skill. See DIRECTION.md for source scope and the rejected composition. This is a marketing prototype, not Harvest application/backend functionality.
 

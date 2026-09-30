@@ -41,6 +41,7 @@ export default defineConfig({
         structures: resolve(import.meta.dirname, "structures/index.html"),
         referenceUi: resolve(import.meta.dirname, "reference-ui/index.html"),
         harvest: resolve(import.meta.dirname, "harvest/index.html"),
+        dayform: resolve(import.meta.dirname, "dayform/index.html"),
         lumaDirected: resolve(import.meta.dirname, "luma-directed/index.html"),
       },
     },

@@ -1,4 +1,10 @@
-# Harvest / Good work, healthy business
+# Dayform / The shape of a workday
+
+Latest user direction: create a new brand, not a Harvest rebrand. **Dayform** is the working name, with no trademark/domain clearance implied. Replaced Harvest's mark with an original stacked-work wordmark, renamed the illustrative application, and removed outbound Harvest signup/product links. All conversion actions lead to the local demo. Trial and live-integration claims were removed. Earlier Harvest research and design history below documents the starting point, not affiliation or ownership. Current route is `/dayform/index.html`; the old Harvest route redirects.
+
+## Superseding hero direction — 0.4.3
+
+The user rejected the familiar neutral/serif/SaaS composition as insufficiently distinctive and could not perceive the earlier shader behind the product UI. The hero now explores **the shape of a workday**: an exposed vermilion artwork of 48 flowing strands, grouped into the fictional project's 24 design / 16 build / 8 strategy hours. The headline is sans rather than another serif/italic formula. UI proof follows below; cards remain straight. The original `workday.frag` uses Paper's ShaderMount runtime, not a Paper preset or Three.js. Color/flow is illustrative, not live analytic data. CSS striped fallback, pause control, context-loss handling and reduced-motion opt-out remain. This is a revised hero direction; the whole site has not been established as a completed new brand. Earlier concept decisions below are retained as iteration history where superseded here.
 
 Independent, user-requested marketing homepage redesign. Not an official Harvest property or an implemented Harvest application. The DataForSEO brief was superseded.
 
