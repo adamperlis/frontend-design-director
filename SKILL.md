@@ -1,7 +1,7 @@
 ---
 name: frontend-design-director
 metadata:
-  version: 0.3.3
+  version: 0.4.1
 description: Design, build, or critique distinctive marketing websites and product frontends by first identifying the site archetype, then applying an evidence-backed structure, visual system, interaction model, and quality bar. Use for landing pages, multi-page marketing sites, SaaS and AI products, developer tools, fintech, ecommerce or physical products, research/editorial sites, portfolios, and high-concept launches. Do not use for ordinary application UI work where an established product design system already dictates the answer.
 ---
 
@@ -10,6 +10,12 @@ description: Design, build, or critique distinctive marketing websites and produ
 Create a coherent design argument, not a decorated template. Preserve an existing brand or design system when one exists; these references supply reasoning and structure, never someone else’s identity, copy, assets, or signature composition. All recipes and code samples are optional starting points: adapt, combine, or ignore them when the product, repository, or audience calls for a different answer.
 
 ## Route before designing
+
+### Ask about the existing UI first
+
+Before designing or rebuilding a site, explicitly establish: **“Should we use the existing UI, or start from scratch?”** Ask once per project when the answer is not already explicit. For an existing brand, distinguish the marketing-site layout from the product UI shown within it: keeping the brand does not answer whether to preserve its application screens. A useful single question is “Keep the existing site/product UI, redesign the marketing site around the existing product UI, or design both from scratch?” If the user already chose, confirm that choice rather than asking again. For a genuinely new product with no UI, confirm the from-scratch direction.
+
+Record the answer in the direction notes. While awaiting it, research and inventory the existing system, but do not finalize or replace its UI. Preserve mode uses real or faithfully reconstructed screens and the established design system; redesign mode permits new UI, clearly labeled as concept rather than actual product screenshots. This is Adam's requested intake gate, not a requirement to ask again before every small edit.
 
 Identify the primary archetype and buying condition. If the brief spans categories, choose one primary archetype and at most one secondary influence.
 
@@ -31,8 +37,8 @@ When uncertain, read [routing.md](references/routing.md). For inner pages, read 
 3. Establish the page’s job, conversion, proof burden, and one dominant visual idea before choosing components.
 4. Draft the section sequence in plain language. Every section must advance understanding, proof, differentiation, or action; remove sections that only restate the hero.
    For product-led pages, identify the claim each UI scene proves, then choose actual UI, a focused crop, simplified UI, or an interactive demonstration. Borrow section-level layout patterns as well as surface styling: relative cell sizes, text-to-art alignment, crop boundaries, and changes in density. Record which inspected reference supports the choice. Read the UI-scene guidance in [saas-ai.md](references/saas-ai.md); one dashboard should not carry every claim.
-5. Sketch two plausible compositions before committing to a showcase design. Choose the one that best explains this product. Record actual type sizes and line lengths, grid proportions, image crops, section transitions, and mobile ordering. Use [composition-recipes.md](references/composition-recipes.md) for concrete, optional examples. A token list alone is insufficient art direction.
-6. Build the semantic skeleton and responsive hierarchy first. Add expressive media and motion only after the page reads correctly without them.
+5. Sketch two plausible compositions before committing to a showcase design. Choose the one that best explains this product. Record actual type sizes and line lengths, grid proportions, image crops, section transitions, and mobile ordering. Read [layered-grid.md](references/layered-grid.md): use an 8px base grid, 24px outer radius/inset for cards, explicit safe/content areas, and at most three type sizes and weights per component. Two font families maximum; **choose fonts for the project, never a fixed house pairing**. Read [typography-selection.md](references/typography-selection.md) when selecting new type. An existing system or an explicit user override takes precedence. Use [composition-recipes.md](references/composition-recipes.md) for concrete, optional examples. A token list alone is insufficient art direction.
+6. Build the semantic skeleton and responsive hierarchy first. Then make an explicit **motion and special-media opportunity pass**: identify where UI microinteractions, a shader-backed product scene, or WebGL/Three.js could improve feedback, storytelling, atmosphere, or material understanding. Read [motion.md](references/motion.md) for this pass and [shader-backed-ui.md](references/shader-backed-ui.md) when considering GPU media. Choose worthwhile moments rather than defaulting to a motionless page or adding effects everywhere. Shader backgrounds behind crisp UI are encouraged occasional ingredients, not a universal hero treatment. Record the purpose, trigger, static fallback, and mobile treatment of each selected moment.
 7. Verify with [quality-gates.md](references/quality-gates.md). Save rendered desktop and mobile evidence and exercise the focal interaction. Record failures and revise before calling a page reviewed. If animation materially shapes the experience, also read [motion.md](references/motion.md).
 
 ## Calibrate the claim to the evidence
@@ -51,7 +57,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 
 - Treat examples as ingredients, not a required stack or visual system.
 - Prefer the target repository’s framework, tokens, dependencies, and conventions.
-- Start with the lowest-complexity pattern that expresses the idea; upgrade DOM/CSS to canvas or WebGL only when it materially improves explanation or identity.
+- Start with the lowest-complexity pattern that expresses the idea; consider canvas, shaders, and Three.js deliberately when they improve explanation, identity, atmosphere, or material character. A restrained shader background can give a product scene depth without becoming the product itself. Do not add Three.js when a full-screen fragment shader alone suffices.
 - Copy the behavior, then rewrite the visual language and content for the project.
 - Preserve semantic HTML, keyboard behavior, reduced-motion fallbacks, and static fallbacks when adapting an example.
 
@@ -70,7 +76,7 @@ When the task includes implementation, read [code-library.md](references/code-li
 - Choose interface icons from the full [26-set catalog](references/iconography.md): all 25 sets Adam supplied plus IBM Carbon. There is no default icon family; select by the project's art direction, required glyphs, stack, and verified license. Keep one coherent family and sizing/weight system per interface, respect existing design systems, and avoid improvised Unicode/emoji UI substitutes. Radix in the examples is just one implementation, not a prescribed choice. Icons support the UI; they do not replace product evidence.
 - Mobile is a recomposition. Preserve the concept while changing crop, order, density, and interaction; do not merely stack desktop columns.
 - Respect `prefers-reduced-motion`; never gate meaning behind hover, scroll choreography, or a canvas effect.
-- Do not reproduce reference copy, trademarks, imagery, proprietary UI, or a recognizable page wholesale. Abstract the principle and create original work.
+- Do not reproduce unrelated reference copy, trademarks, imagery, proprietary UI, or a recognizable page wholesale. Abstract the principle and create original work. For a user-requested redesign of an existing brand, preserve its identity and product UI when that is the chosen mode; distinguish a concept from an official site and verify asset-use terms before public distribution.
 
 ## Avoid the “AI website” default
 

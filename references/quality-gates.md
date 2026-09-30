@@ -7,6 +7,8 @@ Use these to decide whether the work is ready, not to certify it by assertion. V
 Save a short review record beside the project, with links to:
 
 - the chosen concept and rejected alternative, with a reason grounded in the product;
+- the confirmed existing-UI versus from-scratch choice (including whether product screens are preserved);
+- selected UI microinteractions and any special-media opportunities, with purpose and fallback—not merely a list of animation libraries;
 - desktop and narrow-mobile rendered screenshots (record actual viewport sizes);
 - the first viewport, a middle transition, and the focal interaction's changed state;
 - keyboard, reduced-motion, and JavaScript-disabled results where applicable;
@@ -46,6 +48,7 @@ Claims such as “better than the default skill” require a matched evaluation.
 
 ## Visual system
 
+- Verify the layered grid, actual safe insets, nested radii and component type budgets per [layered-grid.md](layered-grid.md); document deliberate deviations.
 - Are type, spacing, color, radius, border, and media rules consistent?
 - Is there one dominant visual idea rather than several unrelated effects?
 - Are product screenshots or photographs art-directed and legible?

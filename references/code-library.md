@@ -52,6 +52,8 @@ For icons, read [iconography.md](iconography.md) and borrow `examples/reference-
 
 ## WebGL and shaders
 
+For occasional shaders behind product UI, read [shader-backed-ui.md](shader-backed-ui.md). `examples/webgl/paper-background.ts` is a reusable guarded Paper Shaders mount; the Harvest concept uses it on a separate background layer beneath semantic UI. It supplements—not replaces—the original Three/R3F examples below. Use Paper for 2D shader effects, Three for genuine spatial/material scenes, and CSS/WAAPI for ordinary UI feedback.
+
 `examples/webgl/AtmosphereCanvas.tsx` is an R3F material study with a static CSS fallback, error boundary, context-loss handling, DPR cap, document/offscreen pausing, and reduced-motion handling. Read [the integration instructions](../examples/webgl/README.md) before copying it. The `?raw` shader imports require Vite or an equivalent configured loader.
 
 - `atmosphere.vert`: low-amplitude vertex displacement.
